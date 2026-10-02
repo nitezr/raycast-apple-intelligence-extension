@@ -1,4 +1,4 @@
-import { Action, ActionPanel, Alert, confirmAlert, Icon, List } from "@raycast/api";
+import { Action, ActionPanel, Alert, confirmAlert, Icon, List, Keyboard } from "@raycast/api";
 import { useLocalStorage } from "@raycast/utils";
 import CustomPromptForm from "./components/CustomPromptForm";
 import ResultView from "./components/ResultView";
@@ -58,7 +58,7 @@ export default function Command() {
     <Action.Push
       title="New Custom Prompt"
       icon={Icon.Plus}
-      shortcut={{ modifiers: ["cmd"], key: "n" }}
+      shortcut={Keyboard.Shortcut.Common.New}
       target={<CustomPromptForm onSave={save} />}
     />
   );
@@ -85,15 +85,15 @@ export default function Command() {
           {pinned && (
             <>
               <Action
-                title="Move Pin Up"
+                title="Move Pin up"
                 icon={Icon.ArrowUp}
-                shortcut={{ modifiers: ["cmd", "shift"], key: "arrowUp" }}
+                shortcut={Keyboard.Shortcut.Common.MoveUp}
                 onAction={() => movePin(item.key, "up")}
               />
               <Action
                 title="Move Pin Down"
                 icon={Icon.ArrowDown}
-                shortcut={{ modifiers: ["cmd", "shift"], key: "arrowDown" }}
+                shortcut={Keyboard.Shortcut.Common.MoveDown}
                 onAction={() => movePin(item.key, "down")}
               />
             </>
@@ -104,7 +104,7 @@ export default function Command() {
               <Action.Push
                 title="Edit Custom Prompt"
                 icon={Icon.Pencil}
-                shortcut={{ modifiers: ["cmd"], key: "e" }}
+                shortcut={Keyboard.Shortcut.Common.Edit}
                 target={<CustomPromptForm prompt={item.custom} onSave={save} />}
               />
               <Action

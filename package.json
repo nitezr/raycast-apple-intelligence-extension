@@ -1,13 +1,12 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "raycast-apple-intelligence",
-  "title": "Apple Intelligence",
-  "description": "Use Apple Intelligence's on-device model from Raycast: writing tools, custom prompts, and chat.",
-  "icon": "apple-intelligence.png",
-  "author": "EvanZhouDev",
+  "name": "apple-intelligence-on-device",
+  "title": "Apple Intelligence On-Device",
+  "description": "Proofread, rewrite, summarize, and chat with Apple's on-device model, right from Raycast.",
+  "icon": "icon.png",
+  "author": "nitezr",
   "categories": [
-    "Productivity",
-    "System"
+    "Productivity"
   ],
   "license": "MIT",
   "commands": [
@@ -156,16 +155,16 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.104.25",
-    "@raycast/utils": "^1.19.1"
+    "@raycast/api": "^2.6.1",
+    "@raycast/utils": "^2.3.2"
   },
   "devDependencies": {
-    "@raycast/eslint-config": "^1.0.11",
+    "@raycast/eslint-config": "^2.2.0",
     "@types/node": "22.19.17",
     "@types/react": "19.0.10",
-    "eslint": "^8.57.0",
-    "prettier": "^3.3.3",
-    "typescript": "^5.4.5"
+    "eslint": "^9.39.4",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "build": "ray build",

@@ -1,4 +1,4 @@
-import { Action, ActionPanel, Icon, List, showToast, Toast } from "@raycast/api";
+import { Action, ActionPanel, Icon, List, showToast, Toast, Keyboard } from "@raycast/api";
 import { useCachedState } from "@raycast/utils";
 import { useState } from "react";
 import { ChatMessage, runChat } from "./model";
@@ -56,7 +56,7 @@ export default function Command() {
     <Action
       title="New Conversation"
       icon={Icon.PlusCircle}
-      shortcut={{ modifiers: ["cmd"], key: "n" }}
+      shortcut={Keyboard.Shortcut.Common.New}
       onAction={() => {
         setTurns([]);
         setSelectedId(undefined);

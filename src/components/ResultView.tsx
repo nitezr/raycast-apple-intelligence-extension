@@ -1,4 +1,4 @@
-import { Action, ActionPanel, Detail, getPreferenceValues, Icon } from "@raycast/api";
+import { Action, ActionPanel, Detail, getPreferenceValues, Icon, Keyboard } from "@raycast/api";
 import { usePromise } from "@raycast/utils";
 import { useState } from "react";
 import { getInputText } from "../input";
@@ -48,14 +48,14 @@ export default function ResultView({ title, instructions, temperature, input }: 
           <Action
             title="Try Again"
             icon={Icon.ArrowClockwise}
-            shortcut={{ modifiers: ["cmd"], key: "r" }}
+            shortcut={Keyboard.Shortcut.Common.Refresh}
             onAction={revalidate}
           />
           {data && (
             <Action
               title={showOriginal ? "Hide Original" : "Show Original"}
               icon={Icon.Eye}
-              shortcut={{ modifiers: ["cmd"], key: "o" }}
+              shortcut={Keyboard.Shortcut.Common.Open}
               onAction={() => setShowOriginal(!showOriginal)}
             />
           )}

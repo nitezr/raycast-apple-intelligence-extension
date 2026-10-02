@@ -1,6 +1,6 @@
-# Apple Intelligence
+# Apple Intelligence On-Device
 
-Use Apple Intelligence from the comfort of Raycast.
+Proofread, rewrite, summarize, and chat with Apple's on-device model, right from Raycast.
 
 Writing tools run on Apple's on-device model through the Foundation Models framework, so text stays on your Mac and works in any app.
 

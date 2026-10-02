@@ -16,4 +16,4 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run lint
-      - run: npm run build -- -e dist
+      - run: npm run build
