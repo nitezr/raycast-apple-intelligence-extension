@@ -11,4 +11,3 @@ export async function runChat(messages: ChatMessage[], instructions: string): Pr
   const result: string = await chat(messages, instructions);
   return result.trim();
 }
-
