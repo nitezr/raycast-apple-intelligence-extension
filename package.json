@@ -1,0 +1,181 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "raycast-apple-intelligence",
+  "title": "Apple Intelligence",
+  "description": "Use Apple Intelligence's on-device model from Raycast: writing tools, custom prompts, and chat.",
+  "icon": "apple-intelligence.png",
+  "author": "EvanZhouDev",
+  "categories": [
+    "Productivity",
+    "System"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "list-writing-tools",
+      "title": "List Writing Tools",
+      "description": "Browse all writing tools and your custom prompts",
+      "mode": "view"
+    },
+    {
+      "name": "ask",
+      "title": "Ask Apple Intelligence",
+      "description": "Chat with Apple's on-device model",
+      "mode": "view"
+    },
+    {
+      "name": "show-writing-tools",
+      "title": "Show Writing Tools",
+      "description": "Show Apple Intelligence Writing Tools menu",
+      "mode": "no-view"
+    },
+    {
+      "name": "rewrite",
+      "title": "Rewrite",
+      "description": "Rewrite the selected text on device",
+      "mode": "view"
+    },
+    {
+      "name": "compose",
+      "title": "Compose",
+      "description": "Write new text from a request with the on-device model",
+      "mode": "view",
+      "arguments": [
+        {
+          "type": "text",
+          "name": "request",
+          "placeholder": "What should I write?",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "create-image",
+      "title": "Create Image",
+      "description": "Create an image with Image Playground",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "type": "text",
+          "name": "prompt",
+          "placeholder": "Prompt"
+        }
+      ]
+    },
+    {
+      "name": "visual-intelligence",
+      "title": "Visual Intelligence",
+      "description": "Ask about what's on your screen with Visual Intelligence (macOS Golden Gate)",
+      "mode": "no-view"
+    },
+    {
+      "name": "create-key-points",
+      "title": "Create Key Points",
+      "description": "Create key points from the selected text on device",
+      "mode": "view"
+    },
+    {
+      "name": "make-concise",
+      "title": "Make Concise",
+      "description": "Make the selected text on device concise",
+      "mode": "view"
+    },
+    {
+      "name": "make-friendly",
+      "title": "Make Friendly",
+      "description": "Make the selected text on device friendly",
+      "mode": "view"
+    },
+    {
+      "name": "make-list",
+      "title": "Make List",
+      "description": "Convert the selected text on device into a list",
+      "mode": "view"
+    },
+    {
+      "name": "make-professional",
+      "title": "Make Professional",
+      "description": "Make the selected text on device professional",
+      "mode": "view"
+    },
+    {
+      "name": "make-table",
+      "title": "Make Table",
+      "description": "Convert the selected text on device into a table",
+      "mode": "view"
+    },
+    {
+      "name": "proofread",
+      "title": "Proofread",
+      "description": "Proofread the selected text on device",
+      "mode": "view"
+    },
+    {
+      "name": "summarize",
+      "title": "Summarize",
+      "description": "Summarize the selected text on device",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "primaryAction",
+      "title": "Primary Action",
+      "description": "What pressing Enter does with a result",
+      "type": "dropdown",
+      "required": false,
+      "default": "paste",
+      "data": [
+        {
+          "title": "Paste into the frontmost app",
+          "value": "paste"
+        },
+        {
+          "title": "Copy to clipboard",
+          "value": "copy"
+        }
+      ]
+    },
+    {
+      "name": "localizedEdit",
+      "title": "Edit Menu Localization",
+      "description": "What is the name of the Edit menu in your language? Used by Show Writing Tools.",
+      "type": "textfield",
+      "required": false,
+      "default": "Edit",
+      "placeholder": "Edit, Bearbeiten, ..."
+    },
+    {
+      "name": "localizedWritingTools",
+      "title": "Writing Tools Localization",
+      "description": "What is the name of the Writing Tools menu item in your language? Used by Show Writing Tools.",
+      "type": "textfield",
+      "required": false,
+      "default": "Writing Tools",
+      "placeholder": "Writing Tools, Schreibtools, ..."
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.25",
+    "@raycast/utils": "^1.19.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  },
+  "platforms": [
+    "macOS"
+  ]
+}
